@@ -1,0 +1,91 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --one-hundred-percent: 100%;
+}
+/* reset start */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: var(--one-hundred-percent);
+  height: var(--one-hundred-percent);
+}
+/* reset end */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+}
+
+#app {
+  max-width: 1280px;
+  /* height: 40px; */
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+}
+#first_border {
+  width: 300px;
+  height: 200px;
+  background: red;
+  background: linear-gradient(
+    90deg,
+    rgba(237, 192, 191, 0.714) 0,
+    rgba(196, 202, 239, 0.651) 58%
+  );
+  opacity: 0.7;
+  border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 34px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: borde-animado 3s infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+@keyframes borde-animado {
+  0% {
+    border: solid 7px white;
+  }
+  100% {
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+    border-radius: 35px; /* this doesn't work */
+    border-width: 4px;
+    border-style: solid;
+  }
+}
